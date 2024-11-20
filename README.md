@@ -1,3 +1,20 @@
+docker setup
+```
+docker volume create mysql_data
+
+docker run -d \
+    --name mysql_container \
+    -e MYSQL_ROOT_PASSWORD=your_root_password \
+    -e MYSQL_DATABASE=your_database_name \
+    -e MYSQL_USER=your_username \
+    -e MYSQL_PASSWORD=your_password \
+    -p 3308:3306 \
+    -v mysql_data:/var/lib/mysql \
+    mysql:latest
+```
+
+
+sample query
 ```
 các công ty product thì hay tuyển ngôn ngữ gì, và các công ty outsource hay tuyển ngôn ngữ gì ?
 ```
